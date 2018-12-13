@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<title>Home</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  z-index: -1;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+</head>
+<body>
+<div class="headerlogo">
+<a href="index.html"><img src="images/logo.jpg" alt="ITB Logo" height="60" width="240"></a>
+</div>
+
+
+<!--Nav Start-->
+<div class="navbar">
+	<a href="index.html">Home</a>
+	<a href="about.html">About Us</a>
+	  <div class="dropdown">
+    <button class="dropbtn">History</button> 
+		<div class="dropdown-content">
+			<a href="hoitb.html">ITB</a>
+			<a href="hola.html">Local Area</a> 
+			<a href="eab.html">Ecology & Biodiversity</a>
+    </div>
+    </div>
+	<a href="gallery.html">Gallery</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="sitemap.html">Sitemap</a>
+  </div> 
+</div>
+<!--Nav End-->
+
+<!--Content Start-->
+<div id="box">
+<h2>Introduction</h2>	
+
+<div class="hometext">
+<p>In January 2019, the Technological University of Dublin will be formed as ITB, DIT, and ITT merge together.
+This will be<br> the first Technological University in Ireland making it an exciting historical event.
+This website is to commemorate ITB's Origins in accordance with the theme of 'Change'.
+It focuses on the history of the campus and surrounding areas.It is targeted towards students, staff, and parents.</p>
+</div>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+<img src="images/ff.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+<img src="images/aa.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+<img src="images/bb.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+<img src="images/cc.jpg" style="width:100%">
+</div>
+
+
+<div class="mySlides fade">
+<img src="images/dd.jpg" style="width:100%">
+</div>
+
+
+<div class="mySlides fade">
+<img src="images/ee.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+<img src="images/ss.jpg" style="width:100%">
+</div>
+
+
+<div class="mySlides fade">
+<img src="images/nn.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+<img src="images/hh.jpg" style="width:100%">
+</div>
+</div>
+<!--Content End-->
+
+<!--Footer Start-->
+<footer>
+&copy; Conor Brennan, B00104265
+</footer> 
+<!--Footer End-->
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none"; 
+  }
+slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1} 
+slides[slideIndex-1].style.display = "block"; 
+setTimeout(showSlides,2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html> 
+
+
+
+
+
